@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Teste.Models.ViewModels.ChamadoVM>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="@item.StatusClass">
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        </tr>
+    }
+
+</table>

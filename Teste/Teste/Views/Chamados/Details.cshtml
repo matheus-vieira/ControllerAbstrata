@@ -1,0 +1,50 @@
+﻿@model Teste.Models.Chamado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Chamado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCriado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCriado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataUltimaAtualizacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataUltimaAtualizacao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ChamadoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
